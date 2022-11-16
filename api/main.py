@@ -1,18 +1,19 @@
 from fastapi import FastAPI
+from Routers import acceso
+
 app = FastAPI()
+app.include_router(acceso.router)
 
 @app.get("/")
 def inicio():
     return{
-        "message": "prueba 1"
+        "message": "Este es mi projecto de mitad de bootcam"
     }
-@app.get("/query")
-def query(name):
-    return {
-        "name":name
-    }
-@app.get("saludar/{name}")
-def saludar(name):
-    return {
-        "saludo": name
+@app.get("info")
+def info():
+    """
+    Aqui pondremos la info de todo lo qe hace cada router
+    """
+    return{
+
     }
