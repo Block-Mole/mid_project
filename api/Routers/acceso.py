@@ -12,12 +12,12 @@ def allinfo(pais:str):
 
 @router.get("/info/name/{pais}") #nos devuelve el nombre del pais
 def name(pais:str):
-    q = db["paises"].find({"Teams": pais.capitalize()},{"_id":0, "Teams":1}) 
+    q = list(db["paises"].find({"Teams": pais.capitalize()},{"_id":0, "Teams":1}))
     return loads(json_util.dumps(q))
 
-@router.get("/info/all/paises") #nos devuelve todos los nombres de los paises
+@router.get("/info/paises/all") #nos devuelve todos los nombres de los paises
 def names():
-    q = db["paises"].find({},{"_id":0, "Teams":1}) 
+    q = list(db["paises"].find({},{"_id":0, "Teams":1}))
     return loads(json_util.dumps(q))
 
 @router.get("/info/stage/{ronda}") #nos devuelve segun la ronda los paises eliminados
@@ -25,6 +25,10 @@ def stage_paises(ronda:str):
     q = db["paises"].find({"Stage": ronda.capitalize()},{"_id":0, "Teams":1}) 
     return loads(json_util.dumps(q))
 
+@router.get("/info/goals_favour_per_game/{pais}") #nos todos los goles por partido de cada pais(todos)
+def goals_per_game(pais):
+    q = list(db["paises"].find({"Teams": pais.capitalize()},{"_id":0, "Goals favour per game":1}))
+    return loads(json_util.dumps(q))    
 
 #@router.get("/paises") #en la ruta hay que escribir /paises?pais=Spain
 #def nombre(pais:str):
