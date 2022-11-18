@@ -12,7 +12,7 @@ def info_all(pais):
     return requests.get(URL_ST+f'/info/all/{pais}').json()
 
 def goal_per_game(pais):
-    return requests.get(URL_ST+f'/info/goals_favour_per_game/{pais}').json()
+    return requests.get(URL_ST+f'/info/goals_favour_per_game').json()
 
 def info_paises_all():
     return requests.get(URL_ST+f'/info/paises/all').json()
