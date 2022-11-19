@@ -1,13 +1,12 @@
 #CREAS LA idea del grafico
 
+import plotly.io as pio
+import plotly.graph_objs as go
+import plotly_express as px
 import matplotlib.pyplot as plt
 
-#name viene de streamlit, del multyselect
-#goals viene de main de la api
 
-def goals_favour_per_game(name, goals): #stats es una lista con dic
-    goal = []
-    for i in goals:
-        for j in i:
-            goal.append(j["Goals favour per game"])
-    return plt.bar(name, goal)
+#creamos grafico de barras con x nombre de paises y datos de la media de goles por partido
+def barras(names, goals):
+    fig = px.bar(x=names, y=goals, labels={'x':'Paises', "y": "Goles por partido"})
+    return fig.show()

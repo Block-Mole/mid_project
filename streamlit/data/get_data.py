@@ -11,7 +11,7 @@ def stage(ronda):
 def info_all(pais):
     return requests.get(URL_ST+f'/info/all/{pais}').json()
 
-def goal_per_game(pais):
+def goals_favour_per_game():
     return requests.get(URL_ST+f'/info/goals_favour_per_game').json()
 
 def info_paises_all():

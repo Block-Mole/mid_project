@@ -10,12 +10,8 @@ def allinfo(pais:str):
     q = db["paises"].find({"Teams": pais.capitalize()},{"_id":0}) 
     return loads(json_util.dumps(q)) #esto es porque q nos devuelve una lista y lo queremos en json
 
-@router.get("/info/name/{pais}") #nos devuelve el nombre del pais
-def name(pais:str):
-    q = list(db["paises"].find({"Teams": pais.capitalize()},{"_id":0, "Teams":1}))
-    return loads(json_util.dumps(q))
 
-@router.get("/info/paises/all") #nos devuelve todos los nombres de los paises
+@router.get("/info/paises/all") #nos devuelve una lista con dic con los nombres de todos los paises
 def names():
     q = list(db["paises"].find({},{"_id":0, "Teams":1}))
     return loads(json_util.dumps(q))
@@ -27,7 +23,7 @@ def stage_paises(ronda:str):
 
 @router.get("/info/goals_favour_per_game") #nos todos los goles por partido de cada pais(todos)
 def goals_per_game():
-    q = list(db["paises"].find({},{"_id":0, "Teams":1, "Goals favour per game":1}))
+    q = list(db["paises"].find({},{"_id":0, "Goals favour per game":1}))
     return loads(json_util.dumps(q))
 
 #@router.get("/equipo/goles") #sumar todos los valores dentro de un filtro
