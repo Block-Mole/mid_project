@@ -1,4 +1,4 @@
-#traemos el grafico y lo juntamos
+
 from numpy import random
 import streamlit as st
 import plotly.graph_objs as go
@@ -17,6 +17,9 @@ select_box = st.sidebar.selectbox("Seleccione la metrica que desee ver",options 
 
 
 if select_box == "Home":
+
+    st.header("¡Bienvenido!" )
+    st.write("Navega a través del menu en el sidebar (a tu izquierda), para acceder a las diferentes metricas del torneo")
 
     g = ["https://media2.giphy.com/media/U2S3BeydJ3ygflT5Gw/giphy.gif", 
     "https://media4.giphy.com/media/LNxb8Iq8BPFrNC6HfU/giphy.gif", 
@@ -59,10 +62,25 @@ if select_box == "Datos de goles":
 
     st.plotly_chart(barras(lst_pais_desc, goals_avg_game_desc))
     #creamos el boton para dar la opcion de verlo en grande
-    st.write("Haz click para abrir el grafico en una nueva pestaña")
-    b0 = st.button("Gráfico 1")
-    if b0 == True:
-        barras(lst_pais_desc,  goals_avg_game_desc).show()
+    pdf = barras(lst_pais_desc, goals_avg_game_desc)
+    col1, col2 = st.columns(2)
+    with col1:
+        st.write("Haz click para abrir el grafico en una nueva pestaña")
+        b0 = st.button("Gráfico 1")
+        if b0 == True:
+            barras(lst_pais_desc,  goals_avg_game_desc).show()
+    #with col2:
+        #st.write("Haz click para descargar el grafico en pdf")
+
+        #fn = 'scatter.png'
+        #img = io.BytesIO()
+        #plt.savefig(img, format='png')
+        
+        #btn = st.download_button(
+            #label="Download image",
+            #data=img,
+            #file_name=fn,
+            #mime="image/png")
 
     st.write("\n")
     st.write("\n")

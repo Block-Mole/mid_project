@@ -1,0 +1,6 @@
+#from fastapi import FastAPI
+#from Database.mongodb import db 
+#from bson import json_util 
+#from json import loads 
+#python 3.9.13
+#uvicorn 0.19.0

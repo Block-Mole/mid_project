@@ -2,7 +2,7 @@
 Proyecto mitad de bootcamp bdmlpt0922
 
 <p align="center"> 
-  LA funcion de esta api es poder acceder a diferentes metricas de los partidos del campeonato de la UEFA EURO 2020.
+  La funcion de esta api es poder acceder a diferentes metricas de los partidos del campeonato de la UEFA EURO 2020.
 </p>
 
 <p align="center">
@@ -40,6 +40,7 @@ Streamlit run:
  - [x] Creacion de diferentes dashboards con streamlit
  - [ ] Añadir datos geoespaciales de los estadios a la db
  - [ ] Crear una dashboard con un mapa de los estadios en donde se jugo cada partido
+ - [ ] Crear varias paginas con multiapp
  - [ ] Export to PDF
  - [ ] Empaquetar con Docker
  - [ ] Subir a Heroku
