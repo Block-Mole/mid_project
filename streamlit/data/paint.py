@@ -16,9 +16,13 @@ def barras2(names, goals):
     fig = px.bar(x=names, y=goals,color=names ,labels={'x':'Pais', "y": "Goles recibidos por partido"})
     return fig
 
+def barras3(names, goals):
+    fig = px.bar(x=names, y=goals,color=names ,labels={'x':'Pais', "y": "Goles / Disparos a puerta"})
+    return fig
+
 
 def stages_tree(paises, rondas, df):
-    fig = px.treemap(df, path=[px.Constant("all"), 'stage', 'teams'])
+    fig = px.treemap(df, path=[px.Constant("all"), 'stage', 'Teams'])
     fig.update_traces(root_color="lightgrey")
     fig.update_layout(margin = dict(t=50, l=25, r=25, b=25))
     return fig
@@ -79,4 +83,12 @@ def radar_shots_per(stat, name):
             fill = "toself"
         )
 
-    return radar  
+    return radar
+
+def tarjetas_per(df):
+    fig = px.bar(df, x="teams", y="tarjetas", color="nombre tarjeta", title="Tarjetas amarillas y rojas por partido")
+    return fig
+
+def tarjetas_totales(df):
+    fig = px.bar(df, x="teams", y="tarjetas", color="nombre tarjeta", title="Tarjetas amarillas y rojas totales")
+    return fig

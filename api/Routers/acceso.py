@@ -31,6 +31,25 @@ def stage():
 def shots_all():
     q = list(db["paises"].find({},{"_id":0,"Teams":1, "Shots total":1, "Shots total on target":1, "Shots per game":1, "Shots on target per game":1, "Shots Total against":1, "Shots against per game":1}))
     return loads(json_util.dumps(q))
+
+@router.get("/info/precision/all") #devuelve toda la info de los disparos
+def precision_all():
+    q = list(db["paises"].find({},{"_id":0,"Accuracy":1}))
+    return loads(json_util.dumps(q))
+
+@router.get("/info/tarjetas/tot") #devuelve toda la info de los disparos
+def tarjetas_tot():
+    q = list(db["paises"].find({},{"_id":0,"Yellow cards total":1, "Red cards total":1}))
+    return loads(json_util.dumps(q))
+
+@router.get("/info/tarjetas/avg") #devuelve toda la info de los disparos
+def tarjetas_avg():
+    q = list(db["paises"].find({},{"_id":0,"Yellow cards per game":1, "Red cards per game":1}))
+    return loads(json_util.dumps(q))
+
+
+
+
 #@router.get("/equipo/goles") #sumar todos los valores dentro de un filtro
 #def todos_goles_avg():
     #res = db["paises"].aggregate([{"$group": {"_id": "$Team", "goles_favor":{"$sum":"$Goals favour per game"}}}])

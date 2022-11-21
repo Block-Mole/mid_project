@@ -20,5 +20,13 @@ def stage():
 def shots_all():
     return requests.get(URL_ST+f'/info/shots/all').json()
 
-#def all_name()
+def precision_all():
+    return requests.get(URL_ST+f'/info/precision/all').json()
+
+def tarjetas_tot():
+    return requests.get(URL_ST+f'/info/tarjetas/tot').json()
+
+def tarjetas_avg():
+    return requests.get(URL_ST+f'/info/tarjetas/avg').json()
+
 
