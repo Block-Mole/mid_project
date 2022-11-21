@@ -8,11 +8,17 @@ from config.enlace import URL_ST
 def goals_favour_per_game():
     return requests.get(URL_ST+f'/info/goals_favour_per_game').json()
 
+def goals_against_per_game():
+    return requests.get(URL_ST+f"/info/goals_against_per_game").json()
+
 def info_paises_all():
     return requests.get(URL_ST+f'/info/paises/all').json()
 
 def stage():
     return requests.get(URL_ST+f'/info/stage').json()
+
+def shots_all():
+    return requests.get(URL_ST+f'/info/shots/all').json()
 
 #def all_name()
 

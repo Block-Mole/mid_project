@@ -16,11 +16,21 @@ def goals_per_game():
     q = list(db["paises"].find({},{"_id":0, "Goals favour per game":1}))
     return loads(json_util.dumps(q))
 
+@router.get("/info/goals_against_per_game") #nos todos los goles recibirdos por partido de cada pais(todos)
+def goals_against_per_game():
+    q = list(db["paises"].find({},{"_id":0, "Goals against per game":1}))
+    return loads(json_util.dumps(q))
+
+
 @router.get("/info/stage") #devuelve la ronda en la que ha quedado eliminada cada pais
 def stage():
     q = list(db["paises"].find({},{"_id":0, "Stage":1}))
     return loads(json_util.dumps(q))
 
+@router.get("/info/shots/all") #devuelve toda la info de los disparos
+def shots_all():
+    q = list(db["paises"].find({},{"_id":0,"Teams":1, "Shots total":1, "Shots total on target":1, "Shots per game":1, "Shots on target per game":1, "Shots Total against":1, "Shots against per game":1}))
+    return loads(json_util.dumps(q))
 #@router.get("/equipo/goles") #sumar todos los valores dentro de un filtro
 #def todos_goles_avg():
     #res = db["paises"].aggregate([{"$group": {"_id": "$Team", "goles_favor":{"$sum":"$Goals favour per game"}}}])
