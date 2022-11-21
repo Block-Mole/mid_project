@@ -149,6 +149,9 @@ if select_box == "Datos de rondas de clasificacion":
     #creamos el cuadro con todos
     st.write(f"Cuadro con las fases de clasificación y los equipos que quedaron eliminados en cada una")
     st.plotly_chart(stages_tree(df["Teams"], df["stage"], df))
+    b0 = st.button("Abrir en otra pestaña")
+    if b0 == True:
+        stages_tree(df["Teams"], df["stage"], df).show()
 
     #creamos la barra
     stages_lst = ["Final","Semi-finals","Quarter-finals","Round of 16", "Group stage: Matchday 3"]
