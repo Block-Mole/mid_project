@@ -1,6 +1,7 @@
-#from numpy import random
-#import streamlit as st
-#import plotly.graph_objs as go
-#import pandas as pd
-#python 3.9.13
-#streamlit 1.14.1
+numpy 1.22.3
+streamlit 1.14.1
+plotly 5.11.0
+plotly-express 0.4.1
+pandas 1.4.3
+python 3.9.13
+streamlit 1.14.1

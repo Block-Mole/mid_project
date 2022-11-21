@@ -19,7 +19,7 @@ select_box = st.sidebar.selectbox("Seleccione la metrica que desee ver",options 
 if select_box == "Home":
 
     st.header("¡Bienvenido!" )
-    st.write("Navega a través del menu en el sidebar (a tu izquierda), para acceder a las diferentes metricas del torneo")
+    st.write("Utiliza el navegador a la izquierda que se muestra en el sidebar, para acceder a las diferentes metricas del torneo")
 
     g = ["https://media2.giphy.com/media/U2S3BeydJ3ygflT5Gw/giphy.gif", 
     "https://media4.giphy.com/media/LNxb8Iq8BPFrNC6HfU/giphy.gif", 
@@ -147,6 +147,7 @@ if select_box == "Datos de rondas de clasificacion":
     df= pd.DataFrame({"Teams":lst_pais, "stage": lst_stage_tot })
 
     #creamos el cuadro con todos
+    st.header("Rondas de clasificacion")
     st.write(f"Cuadro con las fases de clasificación y los equipos que quedaron eliminados en cada una")
     st.plotly_chart(stages_tree(df["Teams"], df["stage"], df))
     b0 = st.button("Abrir en otra pestaña")
@@ -176,6 +177,7 @@ if select_box == "Datos de rondas de clasificacion":
 ##METRICA RADAR DE DISPAROS
 if select_box == "Datos de estadisticas de disparos":
     st.header("Gráficos de las estdísticas de disparos")
+    st.write("A continuacion, puedes seleccionar los paises que deseas comparar los datos de los disparos en un grafico de radar o *'araña'*")
     st.write("\n")
     disparos = shots_all()
     elegidos = st.multiselect("Seleccione los paieses que desee comparar", [i["Teams"] for i in pais])
