@@ -1,16 +1,33 @@
 #traemos el grafico y lo juntamos
-
+from numpy import random
 import streamlit as st
 import plotly.graph_objs as go
 from data.get_data import goals_favour_per_game, info_paises_all,stage, goals_against_per_game, shots_all,precision_all,tarjetas_avg,tarjetas_tot
 from data.paint import barras,barras2,barras3,stages_tree,radar_shots_all,radar_shots_tot,radar_shots_per,tarjetas_per, tarjetas_totales
 import pandas as pd
+
+
+
 st.title("UEFA EURO 2020 Dashboard")
-#hacer un multi select: names = st.multiselect("Selecciona el país", [i["Teams"] for i in pais])
 
 #SIDE BAR CON LAS METRICAS
-metricas = ["Elige una métrica","Datos de goles", "Datos de rondas de clasificacion", "Datos de estadisticas de disparos", "Datos de tarjetas"]
+metricas = ["Home","Datos de goles", "Datos de rondas de clasificacion", "Datos de estadisticas de disparos", "Datos de tarjetas"]
+st.sidebar.title("Menu")
 select_box = st.sidebar.selectbox("Seleccione la metrica que desee ver",options = metricas)
+
+
+if select_box == "Home":
+
+    g = ["https://media2.giphy.com/media/U2S3BeydJ3ygflT5Gw/giphy.gif", 
+    "https://media4.giphy.com/media/LNxb8Iq8BPFrNC6HfU/giphy.gif", 
+    "https://media1.giphy.com/media/3o72F0RQC4xHzSrWMg/giphy.gif", 
+    "https://media1.giphy.com/media/NYe8u6VliRJjV8cHgi/giphy.gif", 
+    "https://media3.giphy.com/media/4eEs61XaMvUPVWh6bc/giphy.gif"]
+   
+    gif = g[random.randint(5)]
+    _left, mid, _right = st.columns(3)
+    with _left:
+        st.image(gif, width=800)
 
 #creo una lista de paises que puede ser de utilidad para varias metricas
 #pais es un alista de dic, con todos los nombres de paises
