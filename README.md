@@ -3,9 +3,9 @@ Bootcamp Mid-Project bdmlpt0922 by Jaime Vaquero
 
 The repo has 3 main parts:
 
--Data cleaning
--API
--Streamlit app
+- Data cleaning
+- API
+- Streamlit app
 
 ## Overview
 The data is from Kaggle and it has been cleaned before uploading it to Mongodb Atlas. An API has been created to connect with Mongodb Atlas and retreive data with GET requests. Last, I have used Streamlit to create an app to display interactive data.
@@ -61,7 +61,7 @@ The API is used as the connection between Mongodb Atlas and the streamlit app. T
 Addition with routers, there’s fastapi swagger provided by Fastapi🤯. You can get it by just adding “docs” after your “localhost” in url i.e. “http://localhost/docs”. You will get the below interface. You can play with it, this interface is divided with tags. Above we have given tags as parameter in routers, these fields has “get”, “post”, etc. request/responses. Depending on which functionality we want to test we can use those routers.
 ![image](https://user-images.githubusercontent.com/113199775/205619231-c4354704-d793-47fc-92f7-6d0558da6298.png)
 
-##Streamlit
+## Streamlit
 
 The streamlit app consists of a sidebar that works as a Menu to navigate throught metrics as shown in the image below:
 
