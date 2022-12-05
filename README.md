@@ -70,7 +70,7 @@ Addition with routers, there’s fastapi swagger provided by Fastapi🤯. You ca
 
 The streamlit app consists of a sidebar that works as a Menu to navigate throught metrics as shown in the image below:
 
-![image](https://user-images.githubusercontent.com/113199775/205620381-05fe975b-4931-409d-8474-20e81c6c82e1.png)
+![image](https://user-images.githubusercontent.com/113199775/205622929-91f8bdff-020b-4065-ab72-e583833b6826.png)
 
 There are 4 metric clusters:
 - Goals Data
