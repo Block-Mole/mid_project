@@ -74,9 +74,17 @@ The streamlit app consists of a sidebar that works as a Menu to navigate through
 
 There are 4 metric clusters:
 - Goals Data
+![image](https://user-images.githubusercontent.com/113199775/205622519-2a2e03dd-06d3-4da8-bc27-99b8d629f136.png)
+
 - Stage Data
+![image](https://user-images.githubusercontent.com/113199775/205622593-39eaed00-d40b-4cbd-97e4-efa095c419e2.png)
+
 - Shots Data
+![image](https://user-images.githubusercontent.com/113199775/205622441-28f64bf6-7b1f-4e74-a674-6a5e24c17ccd.png)
+
 - Fairplay Data
+![image](https://user-images.githubusercontent.com/113199775/205622681-0829adc6-1f47-4c74-8687-dbd7df842707.png)
+
 
 
 ### Requirements:
