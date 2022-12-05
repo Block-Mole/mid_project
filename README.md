@@ -3,9 +3,9 @@ Bootcamp Mid-Project bdmlpt0922 by Jaime Vaquero
 
 The repo has 3 main parts:
 
-Data cleaning
-API
-Streamlit app
+-Data cleaning
+-API
+-Streamlit app
 
 ## Overview
 The data is from Kaggle and it has been cleaned before uploading it to Mongodb Atlas. An API has been created to connect with Mongodb Atlas and retreive data with GET requests. Last, I have used Streamlit to create an app to display interactive data.
