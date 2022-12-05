@@ -59,7 +59,9 @@ The API is used as the connection between Mongodb Atlas and the streamlit app. T
 ### API Reference
 
 Addition with routers, there’s fastapi swagger provided by Fastapi🤯. You can get it by just adding “docs” after your “localhost” in url i.e. “http://localhost/docs”. You will get the below interface. You can play with it, this interface is divided with tags. Above we have given tags as parameter in routers, these fields has “get”, “post”, etc. request/responses. Depending on which functionality we want to test we can use those routers.
-![image](https://user-images.githubusercontent.com/113199775/205621823-e08db6a2-a764-434c-83c5-6651345c3c6f.png)
+![image](https://user-images.githubusercontent.com/113199775/205621990-79cff9cd-6095-414e-8b98-5131f2b741cb.png)
+![image](https://user-images.githubusercontent.com/113199775/205622035-0e8c48e7-06c3-4fa2-afb1-7a8bdbbf0d64.png)
+
 
 
 ## Streamlit
